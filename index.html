@@ -5,17 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
+  <title>The Art of Perspective</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="title">
-      <h1>Picture This!</h1>
+      <h1>The Art of Perspective</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+
+    
+    <picture>
+      
+      <source media="(min-width: 960px)" 
+              srcset="
+                ./images/squared/museum-480x480.jpg 480w,
+                ./images/squared/museum-960x960.jpg 960w,
+                ./images/squared/museum-640x640.jpg 640w,
+                ./images/squared/museum-1280x1280.jpg 1280w,
+                ./images/squared/museum-1920x1920.jpg 1920w,
+                ./images/squared/museum-800x800.jpg 800w,
+                ./images/squared/museum-1600x1600.jpg 1600w,
+                ./images/squared/museum-2400x2400.jpg 2400w"
+              sizes="(max-width: 960px) 480px, 
+                     (max-width: 1280px) 640px, 
+                     (max-width: 1600px) 800px, 
+                     100vw">
+
+      
+      <source media="(max-width: 959px)" 
+              srcset="
+                ./images/landscaped/museum-320x180.jpg 320w,
+                ./images/landscaped/museum-480x270.jpg 480w,
+                ./images/landscaped/museum-640x360.jpg 640w,
+                ./images/landscaped/museum-720x405.jpg 720w,
+                ./images/landscaped/museum-960x540.jpg 960w,
+                ./images/landscaped/museum-1440x810.jpg 1440w,
+                ./images/landscaped/museum-1920x1080.jpg 1920w,
+                ./images/landscaped/museum-2880x1620.jpg 2880w"
+              sizes="(max-width: 320px) 320px, 
+                     (max-width: 480px) 480px, 
+                     (max-width: 720px) 720px, 
+                     (max-width: 960px) 960px, 
+                     100vw">
+
+      
+      <img src="images/museum-960x540.jpg" alt="Museum Image">
+    </picture>
 
   </header>
 </body>
